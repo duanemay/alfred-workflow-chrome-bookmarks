@@ -150,7 +150,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Searching...</string>
+				<string>Indexing...</string>
 				<key>script</key>
 				<string>/usr/bin/python bookmarks.py "{query}"</string>
 				<key>scriptargtype</key>
@@ -187,6 +187,29 @@
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>65EE2015-EE5E-42AC-AA6E-2079620636BA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9D8CCBC8-21EF-4531-9ED1-991016AED66D</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -419,6 +442,13 @@ Originally based on a similar Workflow by: Blaine Schmeisser &lt;http://github.c
 			<integer>390</integer>
 			<key>ypos</key>
 			<integer>390</integer>
+		</dict>
+		<key>9D8CCBC8-21EF-4531-9ED1-991016AED66D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 		<key>A0C43A20-F3AC-483E-AB38-BF6793CC7463</key>
 		<dict>

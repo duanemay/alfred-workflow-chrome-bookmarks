@@ -2,14 +2,14 @@
 # encoding: utf-8
 
 import sys
-import argparse
 
 from workflow import Workflow3
-from workflow.notify import notify
+from workflow.background import run_in_background
 
-log = None
 
 def main(wf):
+    import argparse
+    from workflow.notify import notify
 
     parser = argparse.ArgumentParser()
     parser.add_argument('profile', nargs='?', default=None)
@@ -31,11 +31,15 @@ def main(wf):
     ####################################################################
     profiles.append(profile)
     wf.settings['profiles'] = profiles
-    wf.clear_cache(lambda f: f.startswith('bookmarks'))
     notify('Profile will be searched', profile)
+
+    run_in_background('index',
+                      ['/usr/bin/python',
+                       wf.workflowfile('bookmarkIndex.py')])
+
     return 0  # 0 means script exited cleanly
 
+
 if __name__ == u"__main__":
-    wf = Workflow3()
-    log = wf.logger
-    sys.exit(wf.run(main))
+    workflow = Workflow3()
+    sys.exit(workflow.run(main))
