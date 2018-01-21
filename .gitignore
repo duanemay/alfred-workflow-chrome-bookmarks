@@ -1,3 +1,10 @@
 .idea/
 *.iml
-djm/
+
+*.egg-info/
+*.dist-info/
+
+*.pyc
+
+whoosh/
+workflow/

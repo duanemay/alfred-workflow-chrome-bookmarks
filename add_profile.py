@@ -3,6 +3,7 @@
 
 import sys
 
+from bookmark_index import BACKGROUND_JOB_KEY, UPDATE_INDEX_COMMAND
 from workflow import Workflow3
 from workflow.background import run_in_background
 
@@ -27,16 +28,15 @@ def main(wf):
         return 1
 
     ####################################################################
-    # Save the removed profiles
+    # Save the added profiles
     ####################################################################
-    profiles.remove(profile)
+    profiles.append(profile)
     wf.settings['profiles'] = profiles
-    wf.clear_cache(lambda f: f.startswith('bookmarks'))
-    notify('Profile no longer searched', profile)
+    notify('Profile will be searched', profile)
 
-    run_in_background('index',
+    run_in_background(BACKGROUND_JOB_KEY,
                       ['/usr/bin/python',
-                       wf.workflowfile('bookmarkIndex.py')])
+                       wf.workflowfile(UPDATE_INDEX_COMMAND)])
 
     return 0  # 0 means script exited cleanly
 

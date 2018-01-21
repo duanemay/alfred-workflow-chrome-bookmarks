@@ -193,29 +193,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9D8CCBC8-21EF-4531-9ED1-991016AED66D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -300,7 +277,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>profile=$1
-/usr/bin/python addProfile.py "$profile"</string>
+/usr/bin/python add_profile.py "$profile"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -324,7 +301,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>profile=$1
-/usr/bin/python removeProfile.py "$profile"</string>
+/usr/bin/python remove_profile.py "$profile"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -442,13 +419,6 @@ Originally based on a similar Workflow by: Blaine Schmeisser &lt;http://github.c
 			<integer>390</integer>
 			<key>ypos</key>
 			<integer>390</integer>
-		</dict>
-		<key>9D8CCBC8-21EF-4531-9ED1-991016AED66D</key>
-		<dict>
-			<key>xpos</key>
-			<integer>730</integer>
-			<key>ypos</key>
-			<integer>160</integer>
 		</dict>
 		<key>A0C43A20-F3AC-483E-AB38-BF6793CC7463</key>
 		<dict>
